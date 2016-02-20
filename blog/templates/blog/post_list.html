@@ -1,4 +1,10 @@
 <html>
-	<p>fuck</p>
-	<p>and this is the least</p>
+	<h1>All Posts</h1>
+	{% for post in posts %}
+		<div>
+			<p>published: {{ post.published_date }}</p>
+			<h1><a href="">{{ post.title }}</a></h1>
+			<p>{{ post.text|linebreaks }}</p>
+		</div>
+	{% endfor %}
 </html>
